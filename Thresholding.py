@@ -26,16 +26,12 @@ ret,thresh2=cv2.threshold(gray1,133,255,cv2.THRESH_BINARY_INV)  #applying binary
 #pixel>threshold == white
 #pixel<threshold == black
 
-ret,thresh3=cv2.threshold(gray1,133,255,cv2.THRESH_TRUNC)
 
-ret,thresh4 = cv2.threshold(gray1,127,255,cv2.THRESH_TOZERO)
 
-ret,thresh5 = cv2.threshold(gray1,127,255,cv2.THRESH_TOZERO_INV)
+titles = ['Original Image','BINARY','BINARY_INV']
 
-titles = ['Original Image','BINARY','BINARY_INV','TRUNC','TOZERO','TOZERO_INV']
-
-images = [text1, thresh1, thresh2, thresh3, thresh4, thresh5]
-for i in range(6):
+images = [text1, thresh1, thresh2]
+for i in range(3):
     cv2.imshow(titles[i],images[i])
 
 
