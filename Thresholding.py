@@ -36,7 +36,7 @@ for i in range(3):
 
 
 gray1 = cv2.imread('E:/TRF THEORY/IP/text.jpg',0)
-#gray1 = cv2.medianBlur(img,5)  # to make image blur
+
 
 gaus=cv2.adaptiveThreshold(gray1,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,115,1)
 #115 is block size,1 is constant,gaussian is adaptive process and threh binary is method
